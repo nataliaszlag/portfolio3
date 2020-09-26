@@ -1,0 +1,37 @@
+@
+
+*,
+*:hover,
+*:focus{
+box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-ampersand{
+    font-size: 48px;
+    color: black;
+    -webkit-text-stroke: 1px red;
+
+}
+main{
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    ul{
+        display: block;
+        list-style-type: none;
+        li{
+            overflow: hidden;
+            padding: 15px;
+        }
+    }
+
+
+}
