@@ -1,0 +1,85 @@
+// ==========================================
+// variables
+// ==========================================
+
+//font-var
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'roboto', sans-serif;
+$font-spacing-primary: 10%;
+$font-line-primary: 25pt;
+
+//color-var
+$clr-font: #303030;
+$clr-bg: #f2f2f2;
+$clr-accent: #ec0868;
+
+
+// ============================================
+// main style
+// =======================================
+*,
+*:hover,
+*:focus{
+box-sizing: border-box;
+background-color: $clr-bg;
+color: $clr-font;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $font-primary;
+}
+
+body{
+}
+
+.portfolio-ampersand{
+    font-size: 48px;
+    color: black;
+    -webkit-text-stroke: 1px red;
+}
+
+.hero{
+    height: 100vh;
+    max-width: 90%;
+    margin: auto;
+    background-image: url("");
+}
+
+
+.h1-name{
+    display: inline-block;
+    margin-left: 150px;
+    font-weight: 900;
+    font-size: 160px;
+    line-height: 180px;
+    padding-left: 10px;
+}
+
+.line-1{
+    display: inline-block;
+    content:'';
+    width: 80px;
+    height: 200px;
+    border-top: solid 3px $clr-font;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    ul{
+        display: block;
+        list-style-type: none;
+        li{
+            overflow: hidden;
+            padding: 15px;
+        }
+    }
+
+
+}
+
+p{
+    font-family: $font-secondary;
+}

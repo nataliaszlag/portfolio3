@@ -68,28 +68,41 @@ body {
 }
 
 .resume {
-  margin-top: auto;
+  display: block;
+  width: 40%;
+  position: absolute;
+  left: 5%;
+  bottom: 4%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 .resume-p {
   padding: 15px;
+  margin-left: 15px;
+  margin-bottom: -3px;
 }
-.resume .line-2 {
-  display: inline-block;
-  content: "";
-  width: 104px;
-  height: 200px;
-  border-bottom: solid 3px #303030;
+
+.resume:hover .line-2 {
+  transform: translateX(-50%);
 }
 
 .line-1 {
+  position: absolute;
+  left: 0;
+  top: 50%;
   display: inline-block;
   content: "";
-  width: 80px;
+  width: 120px;
   height: 200px;
-  border-top: solid 3px #303030;
+  border-top: solid 5px #303030;
   margin-left: 300px;
+}
+
+.line-2 {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  transition: 0.2s ease-out;
 }
 
 nav {
