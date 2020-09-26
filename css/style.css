@@ -1,0 +1,36 @@
+*,
+*:hover,
+*:focus {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: verdana;
+}
+
+.portfolio-ampersand {
+  font-size: 48px;
+  color: black;
+  -webkit-text-stroke: 1px red;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: block;
+  list-style-type: none;
+}
+nav ul li {
+  overflow: hidden;
+  padding: 15px;
+}
+
+p {
+  font-family: helvetica;
+}
+
+/*# sourceMappingURL=style.css.map */
