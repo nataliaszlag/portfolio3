@@ -18,6 +18,10 @@
   -webkit-text-stroke: 1px red;
 }
 
+header {
+  height: 100vh;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
