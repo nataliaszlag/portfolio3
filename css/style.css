@@ -16,17 +16,79 @@ body {
   text-decoration: none;
 }
 
-.portfolio-ampersand {
-  font-size: 48px;
-  color: black;
-  -webkit-text-stroke: 1px red;
+p {
+  font-size: clamp(1rem, calc(1vw + 1rem), 3rem);
 }
 
-.hero {
+.hero,
+.about,
+.portfolio,
+.contact {
   min-height: 100%;
   height: 100vh;
   max-width: 95%;
   margin: auto;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about .about-title {
+  text-align: right;
+  padding-right: 5px;
+  border-right: #303030 solid 3px;
+}
+.about .about-p {
+  padding-top: 20px;
+}
+.about .flex-vector {
+  text-align: center;
+  align-items: center;
+}
+.about .about-primary {
+  font-size: clamp(56px, calc(5vw+30px), 180px);
+}
+.about .about-secondary {
+  font-size: clamp(48px, calc(4vw+20px), 140px);
+  color: #ec0868;
+}
+.about .about-terciary {
+  font-size: clamp(36px, calc(3vw+10px), 100px);
+}
+.about .stat {
+  font-size: 30px;
+}
+.about .stat-bar {
+  display: flex;
+  height: 5vh;
+  padding: 0;
+  margin: 0;
+}
+.about .stat-bar * {
+  flex: 1;
+  border: #303030 solid 1px;
+  padding: 5px;
+}
+.about .stat-bar .bar-1 {
+  background-clip: content-box;
+  background-color: #fdc3db;
+}
+.about .stat-bar .bar-2 {
+  background-clip: content-box;
+  background-color: #fb92be;
+}
+.about .stat-bar .bar-3 {
+  background-clip: content-box;
+  background-color: #fa60a1;
+}
+.about .stat-bar .bar-4 {
+  background-clip: content-box;
+  background-color: #f82f84;
+}
+.about .stat-bar .bar-5 {
+  background-clip: content-box;
+  background-color: #ec0868;
 }
 
 .hero-img {
@@ -61,6 +123,13 @@ body {
   font-size: 180px;
   line-height: 200px;
   z-index: 3;
+}
+
+.h1-name-2::after {
+  content: ".";
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ec0868;
 }
 
 .clr-prim {
@@ -130,21 +199,17 @@ nav ul:hover .line-menu-1 {
 nav ul:hover .line-menu-2 {
   transform: translateY(-20px);
 }
-
-li {
+nav li {
   transition: 0.2s ease-out;
 }
-
-li:hover {
+nav li:hover {
   transform: scale(1.2);
   color: #ec0868;
 }
-
-a {
+nav a {
   transition: 0.2s ease-out;
 }
-
-a:hover {
+nav a:hover {
   color: #ec0868;
 }
 
@@ -158,6 +223,109 @@ a:hover {
 
 p {
   font-family: "roboto", sans-serif;
+}
+
+.portfolio .portfolio-header {
+  width: 100%;
+}
+.portfolio .portfolio-header .portfolio-primary {
+  font-size: clamp(56px, calc(5vw+30px), 180px);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+.portfolio .portfolio-header .portfolio-secondary {
+  padding: 15px;
+  display: inline-block;
+  font-size: clamp(42px, calc(4vw+20px), 1140px);
+  letter-spacing: 0.2em;
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ec0868;
+}
+.portfolio .portfolio-ampersand {
+  display: inline-block;
+  font-size: clamp(48px, calc(4vw+20px), 1140px);
+  color: black;
+  -webkit-text-stroke: 1px red;
+}
+.portfolio .projects-flex {
+  display: flex;
+}
+.portfolio .projects-flex .project-gallery {
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+  margin-top: auto;
+  width: 25%;
+  align-items: flex-end;
+  border-right: solid #303030 3px;
+  border-top: solid #303030 3px;
+}
+.portfolio .projects-flex .project-links {
+  padding-left: 10vh;
+  display: box;
+  margin-top: auto;
+  width: 25%;
+  align-items: flex-end;
+}
+.portfolio .projects-flex .project-display {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+.portfolio ul {
+  display: block;
+  list-style-type: none;
+}
+.portfolio ul li {
+  padding: 15px;
+  transition: 0.2s ease-out;
+}
+.portfolio ul a {
+  transition: 0.2s ease-out;
+  display: inline-block;
+}
+.portfolio ul a:hover {
+  color: #ec0868;
+  transform: scale(1.2);
+}
+
+.contact {
+  display: flex;
+}
+.contact .square {
+  width: 50%;
+}
+.contact .bg-cover {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  background-image: url("/img/img-contact.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 10vh;
+}
+.contact .bg-cover .social-sq {
+  margin-top: -4vh;
+  margin-left: 6vh;
+  text-align: center;
+  display: block;
+  height: 12vh;
+  width: 12vh;
+  border: solid #ec0868 3px;
+  background: white;
+}
+.contact .bg-cover .social-ico {
+  height: 5vh;
+  width: 5vh;
+  margin-top: 3vh;
+}
+
+@media (min-width: 600px) {
+  .about-flex {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
