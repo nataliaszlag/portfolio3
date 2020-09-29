@@ -24,6 +24,10 @@ box-sizing: border-box;
 color: $clr-font;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     background-color: $clr-bg;
 }
@@ -128,17 +132,17 @@ p{
 .hero-img{
     object-fit: cover;
     top: 0;
-    left: 45%;
+    left: 30%;
     position: absolute;
     height: 100vh;
-    width: 45%;
+    width: 53%;
     z-index: -1;
 }
 
 .h1-name{
     text-align: right;
     position: absolute;
-    right: 55%;
+    right: 70%;
     top: 30%;
     display: inline-block;
     font-weight: 900;
@@ -151,7 +155,7 @@ p{
 
 .h1-name-2{
     position: absolute;
-    left: 45%;
+    left: 30%;
     top:30%;
     display: inline-block;
     font-weight: 900;
@@ -159,12 +163,29 @@ p{
     line-height: 200px;
     z-index: 3;
 }
+@keyframes dot{
+    33%{
+        transform: scale(1);
+        opacity: 1;
+       }
+   50%{
+    transform: scale(.8);
+    opacity: 0;
+   }
+   66%{
+    transform: scale(1);
+    opacity: 1;
+   }
+
+}
 
 .h1-name-2::after{
     content:".";
+    display: inline-block;
     color: transparent;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: $clr-accent;
+    animation: dot 6s infinite;
 }
 
 .clr-prim{
@@ -195,13 +216,13 @@ p{
 .line-1{
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 47%;
     display: inline-block;
     content:'';
     width: 120px;
     height: 200px;
     border-top: solid 5px $clr-font;
-    margin-left: 300px;
+    margin-left: 8%;
 }
 
 .line-2{
@@ -267,6 +288,24 @@ nav{
 
 p{
     font-family: $font-secondary;
+}
+
+.arrow{
+    display: block;
+    transition: 1s ease-out;
+}
+
+.arrow-about{
+    text-align: center;
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    width: 5%;
+}
+
+.arrow:hover .arrow-svg{
+    stroke: $clr-accent;
+
 }
 // =====================================================================
 // Porfolio
@@ -353,6 +392,7 @@ p{
 // ======================================================================
 .contact{
     display: flex;
+    margin-top: 4vh;
 
     .square{
         width: 50%;

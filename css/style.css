@@ -5,6 +5,10 @@
   color: #303030;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f2f2f2;
 }
@@ -94,17 +98,17 @@ p {
 .hero-img {
   object-fit: cover;
   top: 0;
-  left: 45%;
+  left: 30%;
   position: absolute;
   height: 100vh;
-  width: 45%;
+  width: 53%;
   z-index: -1;
 }
 
 .h1-name {
   text-align: right;
   position: absolute;
-  right: 55%;
+  right: 70%;
   top: 30%;
   display: inline-block;
   font-weight: 900;
@@ -116,7 +120,7 @@ p {
 
 .h1-name-2 {
   position: absolute;
-  left: 45%;
+  left: 30%;
   top: 30%;
   display: inline-block;
   font-weight: 900;
@@ -125,11 +129,27 @@ p {
   z-index: 3;
 }
 
+@keyframes dot {
+  33% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  66% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .h1-name-2::after {
   content: ".";
+  display: inline-block;
   color: transparent;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #ec0868;
+  animation: dot 6s infinite;
 }
 
 .clr-prim {
@@ -158,13 +178,13 @@ p {
 .line-1 {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 47%;
   display: inline-block;
   content: "";
   width: 120px;
   height: 200px;
   border-top: solid 5px #303030;
-  margin-left: 300px;
+  margin-left: 8%;
 }
 
 .line-2 {
@@ -223,6 +243,23 @@ nav a:hover {
 
 p {
   font-family: "roboto", sans-serif;
+}
+
+.arrow {
+  display: block;
+  transition: 1s ease-out;
+}
+
+.arrow-about {
+  text-align: center;
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+  width: 5%;
+}
+
+.arrow:hover .arrow-svg {
+  stroke: #ec0868;
 }
 
 .portfolio .portfolio-header {
@@ -291,6 +328,7 @@ p {
 
 .contact {
   display: flex;
+  margin-top: 4vh;
 }
 .contact .square {
   width: 50%;
