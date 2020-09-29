@@ -262,6 +262,9 @@ p {
   stroke: #ec0868;
 }
 
+.portfolio {
+  margin-bottom: 10vh;
+}
 .portfolio .portfolio-header {
   width: 100%;
 }
@@ -308,6 +311,25 @@ p {
   width: 50%;
   text-align: center;
   align-items: center;
+  perspective: 1000px;
+}
+.portfolio .projects-flex .display-img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  overflow: hidden;
+  top: 22px;
+  left: 35px;
+  width: 469px;
+  height: 262px;
+  z-index: 100;
+}
+.portfolio .projects-flex .display {
+  max-width: 300px;
+  transform: rotateY(-20deg);
+}
+.portfolio .projects-flex .display-svg {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
 }
 .portfolio ul {
   display: block;
@@ -328,7 +350,7 @@ p {
 
 .contact {
   display: flex;
-  margin-top: 4vh;
+  padding-top: 10vh;
 }
 .contact .square {
   width: 50%;
