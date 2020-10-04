@@ -257,25 +257,9 @@ p {
   font-family: "roboto", sans-serif;
 }
 
-.arrow {
-  display: block;
-  transition: 1s ease-out;
-}
-
-.arrow-about {
-  text-align: center;
-  position: absolute;
-  bottom: 4%;
-  right: 5%;
-  width: 5%;
-}
-
-.arrow:hover .arrow-svg {
-  stroke: #ec0868;
-}
-
 .portfolio {
-  margin-bottom: 10vh;
+  display: block;
+  height: 100%;
 }
 .portfolio .portfolio-header {
   width: 100%;
@@ -304,8 +288,6 @@ p {
   display: flex;
 }
 .portfolio .projects-flex .project-gallery {
-  padding-bottom: 5vh;
-  padding-top: 5vh;
   margin-top: auto;
   width: 25%;
   align-items: flex-end;
@@ -320,6 +302,8 @@ p {
   align-items: flex-end;
 }
 .portfolio .projects-flex .project-display {
+  margin: auto;
+  display: block;
   width: 50%;
   text-align: center;
   align-items: center;
@@ -338,7 +322,7 @@ p {
 }
 .portfolio .projects-flex .display {
   max-width: 300px;
-  transform: rotateY(-20deg) scale(1.2);
+  transform: rotateY(-20deg) scale(1.1);
 }
 .portfolio .projects-flex .display-svg {
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
@@ -358,6 +342,9 @@ p {
 .portfolio ul a:hover {
   color: #ec0868;
   transform: scale(1.2);
+}
+.portfolio ul .link-bold {
+  font-weight: 600;
 }
 
 .contact {
