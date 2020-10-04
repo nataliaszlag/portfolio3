@@ -303,27 +303,12 @@ p{
     font-family: $font-secondary;
 }
 
-.arrow{
-    display: block;
-    transition: 1s ease-out;
-}
-
-.arrow-about{
-    text-align: center;
-    position: absolute;
-    bottom: 4%;
-    right: 5%;
-    width: 5%;
-}
-
-.arrow:hover .arrow-svg{
-    stroke: $clr-accent;
-}
 // =====================================================================
 // Porfolio
 // =====================================================================
 .portfolio{
-    margin-bottom: 10vh;;
+    display: block;
+    height: 100%;
     .portfolio-header{
         width: 100%;
 
@@ -355,8 +340,8 @@ p{
         display: flex;
 
         .project-gallery{
-            padding-bottom: 5vh;
-            padding-top: 5vh;
+            //padding-bottom: 5vh;
+            //padding-top: 5vh;
             margin-top: auto;
             width: 25%;
             align-items: flex-end;
@@ -373,6 +358,8 @@ p{
         }
 
         .project-display{
+            margin: auto;
+            display: block;
             width: 50%;
             text-align: center;
             align-items: center;
@@ -393,7 +380,7 @@ p{
 
         .display{
             max-width: 300px;
-            transform: rotateY(-20deg) scale(1.2);
+            transform: rotateY(-20deg) scale(1.1);
         }
 
         .display-svg{
@@ -419,6 +406,10 @@ p{
         a:hover{
             color: $clr-accent;
             transform: scale(1.2);
+        }
+
+        .link-bold{
+            font-weight: 600;
         }
     }
 }
