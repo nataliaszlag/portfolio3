@@ -276,13 +276,11 @@
             <button class="btn-category">ALL</button>
         </div>
         <div class="gallery-display" id="gallery-app">
-            <div class="gallery-img-spot"></div>
-            <div class="gallery-img-spot"></div>
-            <div class="gallery-img-spot"></div>
-            <div class="gallery-img-spot"></div>
-            <div class="gallery-img-spot"></div>
-            <div class="gallery-img-spot"></div>
-        </div>
+            <ul class="gallery-list">
+                <li v-for="img in imgs">
+                    <p class="gallery-img"><img :src="img.url" alt="loading...">
+                </li>
+            </ul>
         <div class="gallery-flex">
             <svg class="gallery-arrow" width="119" height="9" viewBox="0 0 119 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M118.854 4.85357C119.049 4.65831 119.049 4.34172 118.854 4.14646L115.672 0.964481C115.476 0.769219 115.16 0.769219 114.964 0.964481C114.769 1.15974 114.769 1.47633 114.964 1.67159L117.793 4.50002L114.964 7.32844C114.769 7.5237 114.769 7.84029 114.964 8.03555C115.16 8.23081 115.476 8.23081 115.672 8.03555L118.854 4.85357ZM0.5 5L118.5 5.00002L118.5 4.00002L0.5 4L0.5 5Z" fill="black"/>
@@ -344,6 +342,7 @@
     </article>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="./app.js"></script>
   </body>
 
 </html>

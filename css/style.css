@@ -409,6 +409,27 @@ p {
   text-align: center;
 }
 
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.gallery-list li {
+  list-style-type: none;
+  width: 40%;
+  height: auto;
+  margin: 10px;
+}
+.gallery-list li img {
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-img {
+  display: block;
+}
+
 .contact {
   height: 100vh;
   display: block;
@@ -576,6 +597,10 @@ p {
 
   .project-display {
     display: block;
+  }
+
+  .gallery-list li {
+    width: 30%;
   }
 }
 @media (max-width: 659px) {
