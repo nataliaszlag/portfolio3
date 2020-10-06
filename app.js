@@ -1,41 +1,28 @@
 const imgs = [
     {
-      front: 'The "First Computer Programmer"',
-      back: 'Ada Lovelace',
-      flipped: false,
+         url: './gallery/kraftdesign.png',
     },
     {
-      front: 'Invented the "Clarke Calculator"',
-      back: 'Edith Clarke',
-      flipped: false,
-  
+        url: './gallery/leafletaccounting.png',
     },
     {
-      front: 'Famous World War II Enigma code breaker',
-      back: 'Alan Turing',
-      flipped: false,
+         url: './gallery/leafletaphotovoltaics.png',
     },
     {
-      front: 'Created satellite orbit analyzation software for NASA',
-      back: 'Dr. Evelyn Boyd Granville',
-      flipped: false,
+        url: './gallery/logoaccounting.png',
     },
     {
-        front: 'Created satellite orbit analyzation software for NASA',
-        back: 'Dr. Evelyn Boyd Granville',
-        flipped: false,
-      },
-      {
-        front: 'Created satellite orbit analyzation software for NASA',
-        back: 'Dr. Evelyn Boyd Granville',
-        flipped: false,
-      },
-  ]; 
+        url: './gallery/logophotovoltaics.png',
+    },
+    {
+        url: './gallery/naturamed.png',
+    }
+  ];
 
   new Vue({
     el: '#gallery-app',
     data: {
-      cards: imgs,
+      imgs: imgs,
     },
     methods: {}
   });
