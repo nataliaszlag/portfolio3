@@ -24,6 +24,10 @@ p {
   font-size: clamp(1rem, calc(1vw + 1rem), 3rem);
 }
 
+h3 {
+  font-size: 1.75em;
+}
+
 .hero,
 .about,
 .portfolio,
@@ -285,6 +289,7 @@ p {
   -webkit-text-stroke: 1px red;
 }
 .portfolio .projects-flex {
+  margin: auto;
   display: flex;
 }
 .portfolio .projects-flex .project-gallery {
@@ -302,11 +307,9 @@ p {
   align-items: flex-end;
 }
 .portfolio .projects-flex .project-display {
-  margin: auto;
+  right: 0;
   display: block;
   width: 50%;
-  text-align: center;
-  align-items: center;
   perspective: 1000px;
 }
 .portfolio .projects-flex .display-img {
@@ -347,43 +350,201 @@ p {
   font-weight: 600;
 }
 
-.contact {
+.gallery {
+  margin: auto;
+  justify-content: center;
+  height: 100vh;
+  width: 90%;
+}
+.gallery .filter {
+  max-height: 10%;
   display: flex;
-  padding-top: 10vh;
+  padding: 1vw;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery .filter .btn-category {
+  display: inline-block;
+  padding: 15px;
+  border: solid #303030 1px;
+  margin: 5px;
+}
+.gallery .gallery-display {
+  height: 85%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.gallery .gallery-display .gallery-img-spot {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  display: block;
+  width: 35vh;
+  height: 35%;
+  background: #303030;
+}
+.gallery .gallery-arrow {
+  display: flex;
+  margin: auto;
+  text-align: center;
+}
+
+.contact {
+  height: 100vh;
+  display: block;
+}
+.contact .contact-flex {
+  padding-top: 5%;
+  height: 90%;
 }
 .contact .square {
-  width: 50%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .contact .bg-cover {
-  height: auto;
+  height: 60%;
   display: flex;
   flex-direction: row;
   background-image: url("/img/img-contact.JPG");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 10vh;
+  margin-bottom: 5%;
 }
-.contact .bg-cover .social-sq {
+.contact .bg-cover a {
+  display: block;
+  height: 12vh;
+  width: 12vh;
   margin-top: -4vh;
   margin-left: 6vh;
+}
+.contact .bg-cover .social-sq {
   text-align: center;
   display: block;
   height: 12vh;
   width: 12vh;
   border: solid #ec0868 3px;
-  background: white;
+  background: #f2f2f2;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
 }
 .contact .bg-cover .social-ico {
   height: 5vh;
   width: 5vh;
   margin-top: 3vh;
 }
+.contact .bg-cover .social-sq:hover {
+  background: #303030;
+  opacity: 1;
+}
+.contact .bg-cover .social-sq:hover .social-ico path {
+  fill: #f2f2f2;
+}
+.contact .natalia {
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.contact .socials {
+  width: 100%;
+  height: auto;
+}
+.contact .social-info {
+  display: block;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  padding: 5%;
+  border-left: solid 3px #303030;
+  position: relative;
+}
+.contact .icon-shake:hover {
+  animation: shake 1s linear;
+}
+.contact .contact-center {
+  position: absolute;
+  top: 50%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+}
+.contact .socials::before {
+  content: "";
+  display: block;
+  width: 75%;
+  border-bottom: solid #303030 3px;
+}
+.contact .contact-title {
+  margin: auto;
+}
+.contact .contact-line {
+  align-self: flex-end;
+  margin-left: auto;
+}
+.contact .contact-line #line {
+  display: inline-block;
+  stroke: #303030;
+  fill: #303030;
+}
+.contact svg text {
+  font-size: 3em;
+  font-weight: 600;
+  stroke: #303030;
+  stroke-width: 3px;
+  animation: contactAnimate 5s infinite alternate;
+}
+@keyframes contactAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+  }
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
-@media (min-width: 600px) {
+@media (min-width: 660px) {
   .about-flex {
     width: 50%;
     height: 50%;
     overflow: hidden;
+  }
+
+  .contact-flex {
+    display: flex;
+    height: 90%;
+  }
+
+  .square {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bg-cover {
+    min-height: 100%;
+    margin-bottom: 0;
   }
 }
 
