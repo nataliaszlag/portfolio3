@@ -262,6 +262,7 @@ h4{
     line-height: calc((clamp(56px, calc(10vw+50px), 180px))+200px);
     padding-left: 10px;
     z-index: 3;
+    border-style:none;
 }
 
 
@@ -338,18 +339,6 @@ h4{
     }
 }
 
-.line-1{
-    position: absolute;
-    left: 0;
-    top: 47%;
-    display: inline-block;
-    content:'';
-    width: 120px;
-    height: 200px;
-    border-top: solid 3px $clr-font;
-    margin-left: 12%;
-}
-
 .line-2{
     position: absolute;
     overflow: hidden;
@@ -358,6 +347,8 @@ h4{
     transition: .2s ease-out;
     width: 15vw;
 }
+
+
 
 nav{
     position: fixed;
@@ -378,11 +369,21 @@ nav{
             overflow: hidden;
             padding: 15px;
             transition: .2s ease-out;
-            transform: scale(0);
+            transform: scale(0) translateX(300px);
         }
     }
 
-    ul:hover > li{
+    .navbar button{
+        padding: 0;
+        border: none;
+        background: none;
+    }
+    .navbar button:active {
+        outline: none;
+        border: transparent;
+        }
+
+    .show-li{
         opacity: 1;
         transform: scale(1);
     }
@@ -400,17 +401,18 @@ nav{
     }
 
     li:hover{
-        transform: scale(1.2);
         color: $clr-accent;
         background: darken($clr-bg, 20%);
     }
 
     a{
+        display: block;
         transition: .2s ease-out;
     }
 
     a:hover{
         color: $clr-accent;
+        transform: translateX(-10px);
     }
 }
 

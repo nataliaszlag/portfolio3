@@ -218,6 +218,7 @@ h4 {
   line-height: calc((clamp(56px, calc(10vw+50px), 180px))+200px);
   padding-left: 10px;
   z-index: 3;
+  border-style: none;
 }
 
 .h1-name-2 {
@@ -289,18 +290,6 @@ h4 {
   transform: translateX(-90%);
 }
 
-.line-1 {
-  position: absolute;
-  left: 0;
-  top: 47%;
-  display: inline-block;
-  content: "";
-  width: 120px;
-  height: 200px;
-  border-top: solid 3px #303030;
-  margin-left: 12%;
-}
-
 .line-2 {
   position: absolute;
   overflow: hidden;
@@ -331,9 +320,18 @@ nav ul li {
   overflow: hidden;
   padding: 15px;
   transition: 0.2s ease-out;
-  transform: scale(0);
+  transform: scale(0) translateX(300px);
 }
-nav ul:hover > li {
+nav .navbar button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+nav .navbar button:active {
+  outline: none;
+  border: transparent;
+}
+nav .show-li {
   opacity: 1;
   transform: scale(1);
 }
@@ -347,15 +345,16 @@ nav li {
   transition: 0.2s ease-out;
 }
 nav li:hover {
-  transform: scale(1.2);
   color: #ec0868;
   background: #bfbfbf;
 }
 nav a {
+  display: block;
   transition: 0.2s ease-out;
 }
 nav a:hover {
   color: #ec0868;
+  transform: translateX(-10px);
 }
 
 .line-menu-1 {
