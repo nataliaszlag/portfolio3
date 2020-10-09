@@ -26,3 +26,16 @@ const imgs = [
     },
     methods: {}
   });
+
+//////toogle menu/////////////////
+  function showLi() {
+    for(let i= 1; i<=5; i++){
+      let el = document.getElementById("nav"+i);
+      if(el.classList.contains("show-li") ){
+        el.classList.remove("show-li")
+      }
+      else{
+        el.classList.add("show-li")
+      }
+    }
+  }
