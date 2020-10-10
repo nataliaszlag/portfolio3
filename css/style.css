@@ -38,12 +38,13 @@ h4 {
 .hero,
 .about,
 .portfolio,
-.contact {
+.contact,
+.gallery {
   width: 100%;
+  padding-top: 10vw;
 }
 
 .about {
-  margin-top: 3%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -261,7 +262,7 @@ h4 {
 
 .resume {
   display: block;
-  width: 35%;
+  width: 35vw;
   position: absolute;
   left: 5%;
   bottom: 4%;
@@ -272,31 +273,6 @@ h4 {
   padding: 15px;
   margin-left: 15px;
   margin-bottom: -3px;
-}
-
-.line-3 {
-  position: absolute;
-  overflow: hidden;
-  left: 100%;
-  bottom: 30px;
-  width: 15vw;
-  display: inline-block;
-}
-.line-3-clr {
-  stroke: black;
-}
-
-.resume:hover .line-2 {
-  transform: translateX(-90%);
-}
-
-.line-2 {
-  position: absolute;
-  overflow: hidden;
-  right: 0;
-  bottom: 30px;
-  transition: 0.2s ease-out;
-  width: 15vw;
 }
 
 nav {
@@ -383,10 +359,24 @@ p {
 .resume-icon:hover .resume-download {
   animation: download-res 1s ease-out infinite;
 }
+.resume-icon:hover .resume-download path {
+  stroke: #ec0868;
+}
+
+.resume-icon svg path {
+  stroke: #f2f2f2;
+}
+
+.resume-icon {
+  padding: 2%;
+}
+
+.resume-p {
+  color: #f2f2f2;
+}
 
 .portfolio {
   display: block;
-  margin-top: 3%;
 }
 .portfolio .portfolio-header {
   display: block;
@@ -402,13 +392,13 @@ p {
   font-size: clamp(24px, calc(4vw+10px), 70px);
   letter-spacing: 0.2em;
   color: transparent;
-  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #ec0868;
 }
 .portfolio .portfolio-ampersand {
   font-size: clamp(36px, calc(4vw+20px), 1140px);
   color: black;
-  -webkit-text-stroke: 1px red;
+  -webkit-text-stroke: 1px #ec0868;
 }
 .portfolio .projects-flex {
   display: flex;
@@ -474,7 +464,6 @@ p {
 }
 
 .gallery {
-  padding-top: 5%;
   margin: auto;
   justify-content: center;
   width: 100%;
@@ -531,7 +520,7 @@ p {
 }
 .gallery-list li {
   list-style-type: none;
-  width: 40%;
+  width: 30%;
   height: auto;
   margin: 10px;
 }
@@ -605,6 +594,7 @@ p {
   fill: #f2f2f2;
 }
 .contact .natalia {
+  padding-top: 15px;
   display: block;
   width: 100%;
   margin: auto;
@@ -643,8 +633,10 @@ p {
   margin: auto;
 }
 .contact .contact-line {
+  margin-top: -25px;
   align-self: flex-end;
   margin-left: auto;
+  margin-bottom: 40px;
 }
 .contact .contact-line #line {
   display: inline-block;
@@ -684,6 +676,22 @@ p {
 }
 
 @media (min-width: 660px) {
+  .hero,
+.about,
+.portfolio,
+.contact {
+    padding-top: 0vh !important;
+  }
+
+  .gallery {
+    padding-top: 5vh;
+  }
+
+  .about,
+.portfolio {
+    margin-top: 10vh;
+  }
+
   .hero-img {
     object-fit: cover;
     top: 0;
@@ -737,7 +745,6 @@ p {
   }
 
   .about-50 {
-    margin-top: 10%;
     max-width: 40%;
     height: 40%;
     overflow: hidden;
@@ -746,6 +753,11 @@ p {
   .contact-flex {
     display: flex;
     height: 90%;
+  }
+
+  .contact-line {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
   }
 
   .square {
@@ -767,15 +779,42 @@ p {
   .project-links,
 .project-gallery {
     width: 25% !important;
+    padding-bottom: 50px;
   }
 
   .gallery-list li {
-    width: 30%;
+    width: 20%;
+  }
+
+  .portfolio-secondary {
+    -webkit-text-stroke-width: 3px !important;
+  }
+
+  .line-2 {
+    display: block;
+  }
+
+  .resume-icon svg path {
+    stroke: #303030;
+  }
+
+  .resume-p {
+    color: #303030;
   }
 }
 @media (max-width: 659px) {
   .project-display {
     display: none !important;
+  }
+
+  .about-50 {
+    padding: 15% !important;
+    padding-bottom: 0% !important;
+  }
+
+  .vector {
+    padding: 10% !important;
+    transform: translateX(5%);
   }
 }
 
