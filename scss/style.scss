@@ -57,14 +57,15 @@ h4{
 .hero,
 .about,
 .portfolio,
-.contact{
+.contact,
+.gallery{
     width: 100%;
+    padding-top: 10vw;
 }
 // ============================================================================
 // About
 // ============================================================================
 .about{
-    margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
 
@@ -307,7 +308,7 @@ h4{
 
 .resume{
     display: block;
-    width: 35%;
+    width: 35vw;
     position: absolute;
     left: 5%;
     bottom: 4%;
@@ -319,36 +320,6 @@ h4{
         margin-bottom: -3px;
     }
 }
- .line-3{
-    position: absolute;
-    overflow: hidden;
-    left: 100%;
-    bottom: 30px;
-    width: 15vw;;
-    display: inline-block;
-
-
-    &-clr{
-        stroke: black;
-    }
- }
-
-.resume:hover{
-    .line-2{
-        transform: translateX(-90%);
-    }
-}
-
-.line-2{
-    position: absolute;
-    overflow: hidden;
-    right: 0;
-    bottom: 30px;
-    transition: .2s ease-out;
-    width: 15vw;
-}
-
-
 
 nav{
     position: fixed;
@@ -440,14 +411,30 @@ p{
 }
 .resume-icon:hover .resume-download{
     animation: download-res 1s ease-out infinite;
+    path{
+        stroke: $clr-accent;
+    }
 }
+
+.resume-icon svg path{
+    stroke: $clr-bg;
+}
+
+.resume-icon{
+    padding: 2%;
+}
+
+.resume-p{
+    color: $clr-bg;
+}
+
+
 
 // =====================================================================
 // Porfolio
 // =====================================================================
 .portfolio{
     display: block;
-    margin-top: 3%;
 
     .portfolio-header{
         display: block;
@@ -464,7 +451,7 @@ p{
             font-size: clamp(24px, calc(4vw+10px), 70px);
             letter-spacing: .2em;
             color: transparent;
-            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: $clr-accent;
         }
     }
@@ -472,7 +459,7 @@ p{
     .portfolio-ampersand{
         font-size: clamp(36px, calc(4vw+20px), 1140px);
         color: black;
-        -webkit-text-stroke: 1px red;
+        -webkit-text-stroke: 1px $clr-accent;
     }
 
     .projects-flex{
@@ -557,7 +544,6 @@ p{
 // Gallery
 // ======================================================================
 .gallery{
-    padding-top: 5%;
     margin: auto;
     justify-content: center;
     width: 100%;
@@ -620,7 +606,7 @@ p{
 
     li{
         list-style-type: none;
-        width: 40%;
+        width: 30%;
         height: auto;
         margin: 10px;
 
@@ -703,7 +689,6 @@ p{
         .social-sq:hover{
             background: $clr-font;
             opacity: 1;
-            
             .social-ico path{
                 fill: #f2f2f2;
             }
@@ -711,6 +696,7 @@ p{
     }
 
     .natalia{
+        padding-top: 15px;
         display: block;
         width: 100%;
         margin: auto;
@@ -733,6 +719,7 @@ p{
         position: relative;
         z-index: 0;
     }
+
 
     .icon-shake:hover{
         animation: shake 1s linear;
@@ -758,8 +745,10 @@ p{
     }
 
     .contact-line{
+        margin-top: -25px;
         align-self: flex-end;
         margin-left: auto;
+        margin-bottom: 40px;
 
         #line{
             display: inline-block;
@@ -812,6 +801,23 @@ p{
 // =====================================================================
 
 @media (min-width: 660px){
+
+    .hero,
+    .about,
+    .portfolio,
+    .contact,{
+        padding-top:0vh !important;
+}
+
+    .gallery{
+        padding-top: 5vh;
+    }
+
+    .about,
+    .portfolio{
+        margin-top: 10vh;
+    }
+
     .hero-img{
         object-fit: cover;
         top: 0;
@@ -864,7 +870,6 @@ p{
     }
 
     .about-50{
-        margin-top: 10%;
         max-width: 40%;
         height: 40%;
         overflow: hidden;
@@ -873,6 +878,11 @@ p{
         .contact-flex{
             display: flex;
             height: 90%;
+        }
+
+        .contact-line{
+            margin-bottom: 0 !important;
+            padding: 0 !important;
         }
     
         .square{
@@ -894,18 +904,44 @@ p{
         .project-links,
         .project-gallery{
             width: 25% !important;
+            padding-bottom: 50px;
         }
 
         .gallery-list{
             li{
-                width: 30%;
+                width: 20%;
             }
         }
-    
+
+        .portfolio-secondary{
+            -webkit-text-stroke-width: 3px !important;
+        }
+
+        .line-2{
+            display: block;
+        }
+
+        .resume-icon svg path{
+            stroke: $clr-font;
+        }
+
+        .resume-p{
+            color: $clr-font;
+        }
 }
 
 @media (max-width: 659px) {
     .project-display{
         display: none !important;
+    }
+
+    .about-50{
+        padding: 15% !important;
+        padding-bottom: 0% !important;
+    }
+
+    .vector{
+        padding: 10% !important;
+        transform: translateX(5%);
     }
 }
