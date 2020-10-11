@@ -39,17 +39,3 @@ const imgs = [
       }
     }
   }
-
-
-  /////"LightBox"////////////////
-  function showImg() {
-    let img = document.getElementsByClassName("modal-img");
-    console.log(img);
-    if (img.classList.contains("modal-gallery")){
-      img.classList.remove("modal-gallery");
-    }
-    else{
-      img.classList.add("modal-gallery");
-    }
-  }
-
