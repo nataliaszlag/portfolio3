@@ -212,6 +212,9 @@ h4{
     height: 100vh;
 }
 
+.arrow{
+    display: none;
+}
 
 .nav-wrap{
     display: block;
@@ -805,9 +808,17 @@ p{
     .hero,
     .about,
     .portfolio,
-    .contact,{
+    .contact{
         padding-top:0vh !important;
-}
+    }
+
+
+    .arrow{
+        display: block;
+        position: absolute;
+        right: 5vw;
+        top: 50vh;
+    }
 
     .gallery{
         padding-top: 5vh;
