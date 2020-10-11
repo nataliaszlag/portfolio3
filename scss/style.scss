@@ -431,8 +431,6 @@ p{
     color: $clr-bg;
 }
 
-
-
 // =====================================================================
 // Porfolio
 // =====================================================================
@@ -494,26 +492,8 @@ p{
             perspective: 1000px;
         }
 
-        .display-img{
-            display: none;
-            position: absolute;
-            object-fit: cover;
-            overflow: hidden;
-            width: 469px;
-            height: 262px;
-            z-index: 100;
-            top: 22px;
-            left: 35px;
-        }
-
         .display{
             transform: rotateY(-20deg);
-        }
-
-        .display-svg{
-            height: 100%;
-            width: 100%;
-            filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, .7));
         }
     }
 
@@ -815,9 +795,31 @@ p{
 
     .arrow{
         display: block;
-        position: absolute;
-        right: 5vw;
+        position: fixed;
+        right: 2vw;
         top: 50vh;
+        width: 10vw;
+        height: 45vh;
+        
+        svg{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .resume-p::after{
+        position: absolute;
+        right: 1%;
+        bottom: 30px;
+        content: "";
+        display: block;
+        width: 50%;
+        border-bottom: 3px solid $clr-accent;
+        transition: .4s ease-in-out;
+    }
+
+    .resume:hover .resume-p::after{
+        right:40%;
     }
 
     .gallery{
@@ -912,6 +914,24 @@ p{
             display: block;
         }
 
+        .display-img{
+                display: block !important;
+                position: absolute;
+                object-fit: cover;
+                overflow: hidden;
+                width: 469px;
+                height: 262px;
+                z-index: 100;
+                top: 22px;
+                left: 35px;
+            }
+
+        .display-svg{
+            height: 469px;
+            width: 600px;
+            filter: drop-shadow( 0px 0px 10px rgba(0, 0, 0, .7));
+            }
+
         .project-links,
         .project-gallery{
             width: 25% !important;
@@ -939,7 +959,11 @@ p{
         .resume-p{
             color: $clr-font;
         }
-}
+
+        .current{
+            fill: $clr-accent;
+        }
+    }
 
 @media (max-width: 659px) {
     .project-display{
