@@ -428,24 +428,8 @@ p {
   width: 50%;
   perspective: 1000px;
 }
-.portfolio .projects-flex .display-img {
-  display: none;
-  position: absolute;
-  object-fit: cover;
-  overflow: hidden;
-  width: 469px;
-  height: 262px;
-  z-index: 100;
-  top: 22px;
-  left: 35px;
-}
 .portfolio .projects-flex .display {
   transform: rotateY(-20deg);
-}
-.portfolio .projects-flex .display-svg {
-  height: 100%;
-  width: 100%;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
 }
 .portfolio ul {
   display: block;
@@ -689,9 +673,30 @@ p {
 
   .arrow {
     display: block;
-    position: absolute;
-    right: 5vw;
+    position: fixed;
+    right: 2vw;
     top: 50vh;
+    width: 10vw;
+    height: 45vh;
+  }
+  .arrow svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .resume-p::after {
+    position: absolute;
+    right: 1%;
+    bottom: 30px;
+    content: "";
+    display: block;
+    width: 50%;
+    border-bottom: 3px solid #ec0868;
+    transition: 0.4s ease-in-out;
+  }
+
+  .resume:hover .resume-p::after {
+    right: 40%;
   }
 
   .gallery {
@@ -787,6 +792,24 @@ p {
     display: block;
   }
 
+  .display-img {
+    display: block !important;
+    position: absolute;
+    object-fit: cover;
+    overflow: hidden;
+    width: 469px;
+    height: 262px;
+    z-index: 100;
+    top: 22px;
+    left: 35px;
+  }
+
+  .display-svg {
+    height: 469px;
+    width: 600px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.7));
+  }
+
   .project-links,
 .project-gallery {
     width: 25% !important;
@@ -811,6 +834,10 @@ p {
 
   .resume-p {
     color: #303030;
+  }
+
+  .current {
+    fill: #ec0868;
   }
 }
 @media (max-width: 659px) {
