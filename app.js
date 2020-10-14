@@ -100,10 +100,10 @@ function currentId5() {
   let galleryHeight = idCurrent4.offsetHeight;
 
 
-window.addEventListener("scroll", ()=> {
+window.addEventListener("scroll", () => {
 
     if(window.pageYOffset <= homeHeight){
-    currentId1();
+      currentId1();
     }
     else if(window.pageYOffset > homeHeight && window.pageYOffset <= (aboutHeight+homeHeight)){
       currentId2();
