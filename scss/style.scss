@@ -56,7 +56,6 @@ h4{
 
 .hero,
 .about,
-.portfolio,
 .contact,
 .gallery{
     width: 100%;
@@ -526,12 +525,16 @@ p{
 // Mockups
 // ======================================================================
 .mockups{
-    height:70vw;
+    height:100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     overflow: hidden;
+
+    a{
+        padding: 10px;
+    }
 
 }
 
@@ -549,9 +552,9 @@ p{
     img{
         display: block;
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
         height: auto;
-        max-height: 450px;
+        max-height: 500px;
         border-radius: 15px;
         object-fit: cover;
     }
@@ -580,8 +583,12 @@ p{
 .port-img{
     max-width: 100%;
     margin: auto;
-    padding: 10px;
     align-self: center;
+}
+
+.gif{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .flex-txt{
@@ -604,6 +611,7 @@ p{
 // Gallery
 // ======================================================================
 .gallery{
+    display: none;
     margin: auto;
     justify-content: center;
     width: 100%;
@@ -906,6 +914,10 @@ p{
     .about,
     .portfolio{
         margin-top: 10vh;
+    }
+
+    .portfolio{
+        height: auto;
     }
 
     .hero-img{
