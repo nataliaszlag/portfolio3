@@ -1,22 +1,44 @@
 const imgs = [
     {
-         url: './gallery/kraftdesign.png',
+        url: './gallery/anthurium.webp',
+        tag: ['wedding','all'],
     },
     {
-        url: './gallery/leafletaccounting.png',
+        url: './gallery/baby set1.webp',
+        tag: ['other','all'],
     },
     {
-         url: './gallery/leafletaphotovoltaics.png',
+        url: './gallery/kraftdesign.webp',
+        tag: ['business','all'],
     },
     {
-        url: './gallery/logoaccounting.png',
+        url: './gallery/leafletaccounting.webp',
+        tag: ['business','all'],
     },
     {
-        url: './gallery/logophotovoltaics.png',
+        url: './gallery/logophotovoltaics.webp',
+        tag: ['business','all'],
     },
     {
-        url: './gallery/naturamed.png',
-    }
+        url: './gallery/naturamded_big.webp',
+        tag: ['business','all'],
+    },
+    {
+        url: './gallery/loko-ns-2.webp',
+        tag: ['business','all'],
+    },
+    {
+        url: './gallery/logoaccounting.webp',
+        tag: ['business','all'],
+    },
+    {
+        url: './gallery/mountain memories.webp',
+        tag: ['wedding','all'],
+    },
+    {
+        url: './gallery/leafletaphotovoltaics.webp',
+        tag: ['business','all'],
+    },
   ];
 
   new Vue({

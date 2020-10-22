@@ -527,7 +527,6 @@ p {
 }
 
 .gallery {
-  display: none;
   margin: auto;
   justify-content: center;
   width: 100%;
@@ -535,8 +534,8 @@ p {
   margin-right: 0;
 }
 .gallery .filter {
+  display: none;
   max-height: 10%;
-  display: flex;
   padding: 1vw;
   width: 100%;
   text-align: center;
@@ -571,7 +570,7 @@ p {
   background: #303030;
 }
 .gallery .gallery-arrow {
-  display: flex;
+  display: none;
   margin: auto;
   text-align: center;
 }
