@@ -1,3 +1,4 @@
+
 const imgs = [
     {
         url: './gallery/anthurium.webp',
@@ -40,6 +41,7 @@ const imgs = [
         tag: ['business','all'],
     },
   ];
+
 
   new Vue({
     el: '#gallery-app',
@@ -133,10 +135,11 @@ window.addEventListener("scroll", () => {
     else if(window.pageYOffset > (aboutHeight+homeHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight)){
       currentId3();
     }
-    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight+galleryHeight)){
+    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight+galleryHeight+400)){
       currentId4();
     }
-    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight+galleryHeight)){
+    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight+galleryHeight+500)){
       currentId5();
     }
 })
+
