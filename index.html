@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet"  type="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta rel="stylesheet" href="https://unpkg.com/vue-my-photos/dist/lightbox.css">
 <body>
     <img class="hero-img"src="/img/img-hero.webp.webp" alt="zdj"><h1 class="h1-name-2 clr-prim">ag<br>talia</h1>
     <main>
@@ -222,7 +223,7 @@
 
 </article>
 
-    <article class="gallery" id="gallery" onscroll="currentId4()">
+    <article class="gallery" id="gallery">
         <div class="filter">
             <button class="btn-category">BUSINESS</button>
             <button class="btn-category">WEDDING</button>
@@ -230,11 +231,12 @@
             <button class="btn-category">ALL</button>
         </div>
         <div class="gallery-display" id="gallery-app">
-            <ul class="gallery-list">
+            <ul class="gallery-list">           
                 <li v-for="img in imgs" class="modal-img">
                     <p class="gallery-img"><img :src="img.url" alt="loading..." >
                 </li>
             </ul>
+        </div>
         <div class="gallery-flex">
             <svg class="gallery-arrow" width="119" height="9" viewBox="0 0 119 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M118.854 4.85357C119.049 4.65831 119.049 4.34172 118.854 4.14646L115.672 0.964481C115.476 0.769219 115.16 0.769219 114.964 0.964481C114.769 1.15974 114.769 1.47633 114.964 1.67159L117.793 4.50002L114.964 7.32844C114.769 7.5237 114.769 7.84029 114.964 8.03555C115.16 8.23081 115.476 8.23081 115.672 8.03555L118.854 4.85357ZM0.5 5L118.5 5.00002L118.5 4.00002L0.5 4L0.5 5Z" fill="black"/>
@@ -260,6 +262,14 @@
                             <path d="M60.937 36.7828C60.937 37.6398 60.76 38.4549 60.4425 39.1966L42.9222 21.883L59.6948 7.60615C59.8561 7.46652 59.9654 7.29548 60.073 7.12269C60.6091 8.03375 60.937 9.0827 60.937 10.2172V36.7828ZM54.8441 42.9142H10.1559C9.21731 42.9142 8.33947 42.6821 7.5449 42.2981L24.7166 25.0245L30.6637 30.0843C31.0419 30.4071 31.5085 30.5695 31.9752 30.5695C32.4419 30.5695 32.9086 30.4071 33.2885 30.0843L39.8081 24.5341L57.6667 42.1829C56.8184 42.6349 55.8677 42.9142 54.8441 42.9142ZM4.06131 36.7828V10.2172C4.06131 9.37766 4.23306 8.57481 4.53839 7.84526L21.6059 22.3734L4.67198 39.4096C4.29204 38.6102 4.06131 37.7253 4.06131 36.7828ZM10.1559 4.08582H54.8441C55.6196 4.08582 56.3552 4.24639 57.037 4.51342L31.9752 25.8483L7.29335 4.83806C8.15211 4.3738 9.11669 4.08582 10.1559 4.08582ZM54.8441 0H10.1559C4.56962 0 0 4.5972 0 10.2172V36.7828C0 42.4028 4.56962 47 10.1559 47H54.8441C60.4304 47 65 42.4028 65 36.7828V10.2172C65 4.5972 60.4304 0 54.8441 0Z" fill="#303030"/>
                             </svg>
                             <span class="contact-center">nataliaszlag@gmail.com</span>
+                    </div>
+                    <div class="social-info">
+                        <svg class="icon-shake" width="65" height="47" viewBox="0 0 65 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M60.937 36.7828C60.937 37.6398 60.76 38.4549 60.4425 39.1966L42.9222 21.883L59.6948 7.60615C59.8561 7.46652 59.9654 7.29548 60.073 7.12269C60.6091 8.03375 60.937 9.0827 60.937 10.2172V36.7828ZM54.8441 42.9142H10.1559C9.21731 42.9142 8.33947 42.6821 7.5449 42.2981L24.7166 25.0245L30.6637 30.0843C31.0419 30.4071 31.5085 30.5695 31.9752 30.5695C32.4419 30.5695 32.9086 30.4071 33.2885 30.0843L39.8081 24.5341L57.6667 42.1829C56.8184 42.6349 55.8677 42.9142 54.8441 42.9142ZM4.06131 36.7828V10.2172C4.06131 9.37766 4.23306 8.57481 4.53839 7.84526L21.6059 22.3734L4.67198 39.4096C4.29204 38.6102 4.06131 37.7253 4.06131 36.7828ZM10.1559 4.08582H54.8441C55.6196 4.08582 56.3552 4.24639 57.037 4.51342L31.9752 25.8483L7.29335 4.83806C8.15211 4.3738 9.11669 4.08582 10.1559 4.08582ZM54.8441 0H10.1559C4.56962 0 0 4.5972 0 10.2172V36.7828C0 42.4028 4.56962 47 10.1559 47H54.8441C60.4304 47 65 42.4028 65 36.7828V10.2172C65 4.5972 60.4304 0 54.8441 0Z"
+                                fill="#303030" />
+                        </svg>
+                        <span class="contact-center">Poznań, Wielkoposkie, Polska</span>
                     </div>
                 </div>
                 <div class="natalia">

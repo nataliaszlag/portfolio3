@@ -680,6 +680,32 @@ p {
 
 .gallery-img {
   display: block;
+  cursor: pointer;
+}
+
+// ======================================================================
+// Lightbox
+// ======================================================================
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 150vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  width: auto;
+  height: 80%;
+  padding: 5px;
 }
 
 // ======================================================================
