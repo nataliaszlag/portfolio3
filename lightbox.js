@@ -4,7 +4,6 @@ document.getElementById('gallery-app').appendChild(lightbox);
 
 
 const images = document.querySelectorAll("p.gallery-img > img")
-console.log(images)
 
 images.forEach(image => {
     image.addEventListener('click', e =>{

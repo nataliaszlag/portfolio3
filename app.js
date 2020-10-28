@@ -132,13 +132,13 @@ window.addEventListener("scroll", () => {
     else if(window.pageYOffset > homeHeight && window.pageYOffset <= (aboutHeight+homeHeight)){
       currentId2();
     }
-    else if(window.pageYOffset > (aboutHeight+homeHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight)){
+    else if(window.pageYOffset > (aboutHeight+homeHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight+500)){
       currentId3();
     }
-    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight+galleryHeight+400)){
+    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight)&& window.pageYOffset <= (aboutHeight+homeHeight+portfolioHeight+galleryHeight+500)){
       currentId4();
     }
-    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight+galleryHeight+500)){
+    else if(window.pageYOffset > (portfolioHeight+homeHeight+aboutHeight+galleryHeight+900)){
       currentId5();
     }
 })
