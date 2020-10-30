@@ -1,43 +1,43 @@
 
 const imgs = [
     {
-        url: './gallery/anthurium.webp',
+        url: './img/gallery/anthurium.webp',
         tag: ['wedding','all'],
     },
     {
-        url: './gallery/baby set1.webp',
+        url: './img/gallery/baby set1.webp',
         tag: ['other','all'],
     },
     {
-        url: './gallery/kraftdesign.webp',
+        url: './img/gallery/kraftdesign.webp',
         tag: ['business','all'],
     },
     {
-        url: './gallery/leafletaccounting.webp',
+        url: './img/gallery/leafletaccounting.webp',
         tag: ['business','all'],
     },
     {
-        url: './gallery/logophotovoltaics.webp',
+        url: './img/gallery/logophotovoltaics.webp',
         tag: ['business','all'],
     },
     {
-        url: './gallery/naturamded_big.webp',
+        url: './img/gallery/naturamded_big.webp',
         tag: ['business','all'],
     },
     {
-        url: './gallery/loko-ns-2.webp',
+        url: './img/gallery/loko-ns-2.webp',
         tag: ['business','all'],
     },
     {
-        url: './gallery/logoaccounting.webp',
+        url: './img/gallery/logoaccounting.webp',
         tag: ['business','all'],
     },
     {
-        url: './gallery/mountain memories.webp',
+        url: './img/gallery/mountain memories.webp',
         tag: ['wedding','all'],
     },
     {
-        url: './gallery/leafletaphotovoltaics.webp',
+        url: './img/gallery/leafletaphotovoltaics.webp',
         tag: ['business','all'],
     },
   ];
