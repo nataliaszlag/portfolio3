@@ -27,7 +27,7 @@
 
         </logo>
         <nav>
-            <ul class="navbar">
+            <ul class="navbar" id="nav-box">
                 <div onclick="showLi()" class="hamburger-box" id="hamburger-box">
                 <svg class="hamburger" viewBox="0 0 80 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g  class="line-menu-1"><line y1="1.5" x2="80" y2="1.5" stroke="#303030" stroke-width="3"/></g>
@@ -36,11 +36,11 @@
                     </svg>
                 </div>
 
-                <li class="nav-list" id="nav1"><a href ="#home">HOME</a></li>
-                <li class="nav-list" id="nav2"><a href ="#about">ABOUT</a></li>
-                <li class="nav-list" id="nav3"><a href ="#portfolio">PORTFOLIO</a></li>
-                <li class="nav-list" id="nav4"><a href ="#gallery">GALLERY</a></li>
-                <li class="nav-list" id="nav5"><a href ="#contact">CONTACT</a></li>
+                <li onclick="closeLi()" class="nav-list" id="nav1"><a href ="#home">HOME</a></li>
+                <li onclick="closeLi()" class="nav-list" id="nav2"><a href ="#about">ABOUT</a></li>
+                <li onclick="closeLi()" class="nav-list" id="nav3"><a href ="#portfolio">PORTFOLIO</a></li>
+                <li onclick="closeLi()" class="nav-list" id="nav4"><a href ="#gallery">GALLERY</a></li>
+                <li onclick="closeLi()" class="nav-list" id="nav5"><a href ="#contact">CONTACT</a></li>
             </ul>
         </nav>
 
@@ -231,15 +231,15 @@
 
     <article class="gallery" id="gallery">
         <div class="filter">
-            <button class="btn-category">BUSINESS</button>
-            <button class="btn-category">WEDDING</button>
-            <button class="btn-category">OTHERS</button>
-            <button class="btn-category">ALL</button>
+            <button class="btn-category" data-filter="business" onclick=filterGallery(event)>BUSINESS</button>
+            <button class="btn-category" data-filter="wedding" onclick=filterGallery(event)>WEDDING</button>
+            <button class="btn-category" data-filter="other" onclick=filterGallery(event)>OTHERS</button>
+            <button class="btn-category" data-filter="all" onclick=filterGallery(event)>ALL</button>
         </div>
         <div class="gallery-display" id="gallery-app">
             <ul class="gallery-list">           
-                <li v-for="img in imgs" class="modal-img">
-                    <p class="gallery-img"><img :src="img.url" alt="gallery image" >
+                <li v-for="img in imgs" class="modal-img" :class="img.type">
+                    <p class="gallery-img" ><img :src="img.url" alt="Loading..." >
                 </li>
             </ul>
         </div>

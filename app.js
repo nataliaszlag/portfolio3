@@ -1,54 +1,52 @@
-
 const imgs = [
     {
         url: './img/gallery/anthurium.webp',
-        tag: ['wedding','all'],
+        type: ['wedding','all'],
     },
     {
         url: './img/gallery/baby set1.webp',
-        tag: ['other','all'],
+        type: ['other','all'],
     },
     {
         url: './img/gallery/kraftdesign.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
     {
         url: './img/gallery/leafletaccounting.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
     {
         url: './img/gallery/logophotovoltaics.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
     {
         url: './img/gallery/naturamded_big.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
     {
         url: './img/gallery/loko-ns-2.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
     {
         url: './img/gallery/logoaccounting.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
     {
         url: './img/gallery/mountain memories.webp',
-        tag: ['wedding','all'],
+        type: ['wedding','all'],
     },
     {
         url: './img/gallery/leafletaphotovoltaics.webp',
-        tag: ['business','all'],
+        type: ['business','all'],
     },
   ];
-
 
   new Vue({
     el: '#gallery-app',
     data: {
       imgs: imgs,
+      type: '',
     },
-    methods: {}
   });
 
 //////toogle menu/////////////////
@@ -64,7 +62,12 @@ const imgs = [
     }
   }
 
-
+  function closeLi() {
+    for(let i= 1; i<=5; i++){
+      let el = document.getElementById("nav"+i)
+           el.classList.remove("show-li")
+        }
+      }
   //////////arrow///////////
 
   function currentId1() {
@@ -143,3 +146,15 @@ window.addEventListener("scroll", () => {
     }
 })
 
+function filterGallery(e) {
+  const gallery = document.querySelectorAll(".gallery-list li"); // select all gallery divs
+  let filter = e.target.dataset.filter; // grab the value in the event target's data-filter attribute
+  if (filter === '*') {
+  gallery.forEach(gallery => gallery.classList.remove('hidden'));
+}
+  gallery.forEach(gallery => {
+    gallery.classList.contains(filter) // does the gallery have the filter in its class list?
+    ? gallery.classList.remove('hidden') // if yes, make sure .hidden is not applied
+    : gallery.classList.add('hidden'); // if no, apply .hidden
+  });
+};
