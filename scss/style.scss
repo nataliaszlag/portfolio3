@@ -339,7 +339,7 @@ nav {
       overflow: hidden;
       padding: 15px;
       transition: 0.2s ease-out;
-      transform: scale(0) translateX(300px);
+      transform: translateX(300px);
     }
   }
 
@@ -355,7 +355,7 @@ nav {
 
   .show-li {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0px);
   }
 
   ul:hover .line-menu-1 {
@@ -613,7 +613,7 @@ p {
   .filter {
     display: none;
     max-height: 10%;
-    // display: flex;
+     display: flex;
     padding: 1vw;
     width: 100%;
     text-align: center;
@@ -683,6 +683,9 @@ p {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
 // ======================================================================
 // Lightbox
 // ======================================================================
@@ -961,6 +964,7 @@ p {
   .hamburger-box {
     height: 5vw;
     width: 5vw;
+    cursor: pointer;
   }
 
   main {
